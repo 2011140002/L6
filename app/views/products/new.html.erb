@@ -1,6 +1,6 @@
 products#new
 
-<%=form_for @product, url: {actiond: :create} do |pro| %>
+<%=form_for @product, url: {action: :create} do |pro| %>
 
   <%= pro.label :name, '商品名' %>
   <%= pro.text_field :name %>
