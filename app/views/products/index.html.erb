@@ -2,7 +2,7 @@
 
   商品<%=product.id%>(<%= product.name %>,<%=product.price%>円)
   <%= link_to '削除', product_path(id: product.id), method: :delete %>
-  <%= link_to 'カート追加', new_cart_item_path(id: product.id) %><br>
+  <%= link_to 'カート追加', new_cart_item_path(product_id: product.id) %><br>
   
 
 <% end %><br>
