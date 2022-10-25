@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resourses :products
+  resources :products
   root 'products#index'
   # root 'top/main'
   get 'top/main'
