@@ -3,8 +3,8 @@
 
 <%= form_for @cart_item, url: {action: :create} do |pro|%>
 
-<%= pro.label :quantity, '数量' %>
-<%= pro.number_field :quantity, in: 1.0..10, step: 1 %>
+<%= pro.label :qty, '数量' %>
+<%= pro.number_field :qty, in: 1.0..10, step: 1 %>
 <%= pro.submit '追加' %>
 
 <% end %>
