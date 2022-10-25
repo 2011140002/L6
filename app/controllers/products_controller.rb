@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
     product = Product.new(name: params[:product][:name],
     price: params[:product][:price])
     if product.save
-      redirect_to 'index'
+      redirect_to root_path
     else
       flash[:notice] = "商品登録に失敗しました"
     end
