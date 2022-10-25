@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resourses :products
+  root 'products#index'
+  # root 'top/main'
   get 'top/main'
-  get 'carts/show'
-  get 'cart_items/new'
-  get 'products/index'
+  resources :cart_items, only: [:new, :create, :destroy]
+  resources :carts, only: [:show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
