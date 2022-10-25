@@ -4,6 +4,10 @@
 <% @products.each do |product| %>
 
   <%= product.name %>
-  <%= link_to '削除', product_path(id: product.id), method: :delete %> 
+  <%= link_to '削除', product_path(id: product.id), method: :delete %>
+  <%= link_to 'カート追加', "" %>
+  
 
 <% end %>
+<%= link_to '商品を追加する', "" %>
+<%= link_to 'カートを見る' , ""%>
