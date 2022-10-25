@@ -8,9 +8,10 @@ class CartItemsController < ApplicationController
   def create
     # qty = params[:cart_item][:qty]
     # qty = 1
-    cart_item = CartItem.new(product_id: params[:product_id],
-    cart_id: :current_cart, qty: 1)
-    debug.log(cart_item)
+    # cart_item = CartItem.new(product_id: params[:product_id],
+    # cart_id: :current_cart, qty: 1)
+    cart_item = CartItem.new(product_id: 4, cart_id: 1, qty: 1)
+    debugger.log(cart_item)
     if cart_item.save
       flash[:notice] = 'アイテムがカートに追加されました'
       redirect_to root_path
