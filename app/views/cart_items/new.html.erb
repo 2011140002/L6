@@ -1,2 +1,10 @@
 <h1>CartItems#new</h1>
 <p>Find me in app/views/cart_items/new.html.erb</p>
+
+<%= form_for @cart_items, url: {action: :create} do |pro|%>
+
+<%= pro.label :quantity, '数量' %>
+<%= pro.number_field :quantity, in: 1.0..10, step: 1 %>
+<%= pro.submit '追加' %>
+
+<% end %>
