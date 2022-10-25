@@ -5,7 +5,7 @@ products#new
   <%= pro.label :name, '商品名' %>
   <%= pro.text_field :name %>
   <%= pro.label :price, '価格' %>
-  <%= pro.number_field :price %>
+  <%= pro.number_field :price, in: 1.0.., step: 1 %>
   <%= pro.submit '登録' %>
 
 <% end %>
