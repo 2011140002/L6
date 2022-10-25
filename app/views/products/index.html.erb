@@ -3,7 +3,7 @@
 
 <% @products.each do |product| %>
 
-  商品<%=product.id%>(<%= product.name %>,<%=product.price%>
+  商品<%=product.id%>(<%= product.name %>,<%=product.price%>円)
   <%= link_to '削除', product_path(id: product.id), method: :delete %>
   <%= link_to 'カート追加', "" %><br>
   
