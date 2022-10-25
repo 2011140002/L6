@@ -10,4 +10,4 @@
 
 <% end %>
 <%= link_to '商品を追加する', new_product_path %>
-<%= link_to 'カートを見る' , cart_path(id: session[:cart_id]) %>
+<%= link_to 'カートを見る' , cart_path(cart_id: session[:cart_id]) %>
