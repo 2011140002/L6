@@ -4,6 +4,6 @@
 <% @products.each do |product| %>
 
   <%= product.name %>
-  <%= link_to '削除', products_path(id: product.id), method: :delete %> 
+  <%= link_to '削除', product_path(id: product.id), method: :delete %> 
 
 <% end %>
