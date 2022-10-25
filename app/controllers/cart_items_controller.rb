@@ -1,6 +1,6 @@
 class CartItemsController < ApplicationController
   def new
-    @cart_item = CartItem.new(product_id: params[product_id],
+    @cart_item = CartItem.new(product_id: params[id],
     cart_id: :current_cart.id)
     
   end
