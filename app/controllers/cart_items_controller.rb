@@ -6,15 +6,15 @@ class CartItemsController < ApplicationController
   end
   
   def create
-    cart_item.product = Product.find(5)
-    cart_item.cart = Cart.find(1)
-    cart_item.qty = 3
-    if cart_item.save
-      flash[:notice] = 'アイテムがカートに追加されました'
-      redirect_to root_path
-    else
-      flash[:notice] = 'アイテムの追加に失敗しました'
-    end
+    # cart_item.product = Product.find(5)
+    # cart_item.cart = Cart.find(1)
+    # cart_item.qty = 3
+    # if cart_item.save
+    #   flash[:notice] = 'アイテムがカートに追加されました'
+    #   redirect_to root_path
+    # else
+    #   flash[:notice] = 'アイテムの追加に失敗しました'
+    # end
   end
   
   def destroy
