@@ -2,8 +2,9 @@
 <p>Find me in app/views/carts/show.html.erb</p>
 
 <% @cart_items.each do |item| %>
-
- 名称：<%= item.product.name %>
- /数量：<%= item.qty %><br>
+ 商品<%= item.product.id %>
+ (名称：<%= item.product.name %>、
+ 価格：<%= item.pruduct.price %>、
+ 数量：<%= item.qty %>)<br>
 
 <% end %>
