@@ -3,6 +3,7 @@
 
 <% @cart_items.each do |item| %>
 
- <%= item.product.name %><br>
+ 名称：<%= item.product.name %>
+ 数量：<%= item.qty %><br>
 
 <% end %>
