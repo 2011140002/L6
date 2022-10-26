@@ -6,6 +6,6 @@
  (名称：<%= item.product.name %>、
  価格：<%= item.product.price %>、
  数量：<%= item.qty %>)
- <%= link_to 'カートから削除', "" %><br>
+ <%= link_to 'カートから削除', cart_item_path(id: item.id), method: :delete %><br>
 
 <% end %>
