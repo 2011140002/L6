@@ -11,7 +11,7 @@ class CartItemsController < ApplicationController
     if cart_item.save
       flash[:notice] = 'アイテムがカートに追加されました'
       @cart_items = CartItem.where(cart_id: :current_cart)
-      render template: 'carts/show'
+      render 'carts/show'
     else
       flash[:notice] = 'アイテムの追加に失敗しました'
     end
