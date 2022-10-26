@@ -10,7 +10,8 @@ class CartItemsController < ApplicationController
     cart_id: params[:cart_item][:cart_id])
     if cart_item.save
       flash[:notice] = 'アイテムがカートに追加されました'
-      render 'carts/show'
+      @cart_items = CartItem.where(cart_id: params[:id])
+      render template: 'carts/show'
     else
       flash[:notice] = 'アイテムの追加に失敗しました'
     end
