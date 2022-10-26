@@ -10,7 +10,7 @@ class CartItemsController < ApplicationController
     cart_id: params[:cart_item][:cart_id])
     if cart_item.save
       flash[:notice] = 'アイテムがカートに追加されました'
-      redirect_to root_path
+      redirect_to cart_path(id: :current_cart)
     else
       flash[:notice] = 'アイテムの追加に失敗しました'
     end
