@@ -10,8 +10,8 @@ class CartItemsController < ApplicationController
     cart_id: params[:cart_item][:cart_id])
     if cart_item.save
       flash[:notice] = 'アイテムがカートに追加されました'
-      @cart_items = CartItem.where(cart_id: :current_cart)
-      render 'carts/show'
+      # @cart_items = CartItem.where(cart_id: :current_cart)
+      redirect_to cart_path(:current_cart)
     else
       flash[:notice] = 'アイテムの追加に失敗しました'
     end
