@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
             cart = Cart.create
             session[:cart_id] = cart.id
         end
-        return cart
+        cart
     end
     helper_method :current_cart
 end
