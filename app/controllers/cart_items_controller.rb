@@ -1,7 +1,8 @@
 class CartItemsController < ApplicationController
   def new
+    cart = :current_cart
     @cart_item = CartItem.new(product_id: params[:product_id],
-    cart_id: :current_cart)
+    cart_id: cart.id)
     
   end
   
