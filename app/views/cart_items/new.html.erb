@@ -1,6 +1,6 @@
 
-pro:<%= @product_id %><br>
-cart:<%= current_cart.id %><br>
+商品名:<%= @product.name %><br>
+価格:<%= @product.price %><br>
 <%= form_for @cart_item, url: {action: :create} do |pro|%>
     <%= pro.hidden_field :product_id, :value => @product_id %>
     <%= pro.hidden_field :cart_id, :value => current_cart.id %>

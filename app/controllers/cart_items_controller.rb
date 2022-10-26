@@ -1,7 +1,7 @@
 class CartItemsController < ApplicationController
   def new
     @cart_item = CartItem.new()
-    @product_id = params[:product_id]
+    @product = Product.find(params[:product_id])
   end
   
   def create
