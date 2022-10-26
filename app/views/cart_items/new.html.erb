@@ -1,11 +1,12 @@
 <h1>CartItems#new</h1>
 <p>Find me in app/views/cart_items/new.html.erb</p>
-pro:<%= @cart_item.product_id %><br>
+pro:<%= @product_id %><br>
 cart:<%= current_cart.id %><br>
 <%= form_for @cart_item, url: {action: :create} do |pro|%>
-
-<%= pro.label :qty, '数量' %>
-<%= pro.number_field :qty, in: 1.0..10, step: 1 %>
-<%= pro.submit '追加' %>
+    <%= pro.hidden_field :product_id, :value => @product_id %>
+    <%= pro.hidden_field :cart_id, :value => current_cart.id %>
+    <%= pro.label :qty, '数量' %>
+    <%= pro.number_field :qty, in: 1.0..10, step: 1 %>
+    <%= pro.submit '追加' %>
 
 <% end %>
