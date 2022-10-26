@@ -1,6 +1,7 @@
 <h1>CartItems#new</h1>
 <p>Find me in app/views/cart_items/new.html.erb</p>
-<%= @cart_item %>
+<%= @cart_item.product_id %>
+<%= @cart_item.cart_id %>
 <%= form_for @cart_item, url: {action: :create} do |pro|%>
 
 <%= pro.label :qty, '数量' %>
