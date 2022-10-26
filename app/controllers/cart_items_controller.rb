@@ -10,7 +10,7 @@ class CartItemsController < ApplicationController
     cart_id: params[:cart_item][:cart_id])
     if cart_item.save
       flash[:notice] = 'アイテムがカートに追加されました'
-      redirect_to cart_path(id: :current_cart)
+      render template: 'carts/show'
     else
       flash[:notice] = 'アイテムの追加に失敗しました'
     end
@@ -19,7 +19,7 @@ class CartItemsController < ApplicationController
   def destroy
     cart_item = CartItem.find(params[:id])
     cart_item.destroy
-    redirect_to root_path
+    redirect_to cart_path(id: :current_cart)
   end
   
 end
