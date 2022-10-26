@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
   def show
-    @cart = :current_cart
+    @cart_items = CartItem.findby(cart_id: :current_cart
+    .id)
     
   end
 end
